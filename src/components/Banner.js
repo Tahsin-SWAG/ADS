@@ -7,7 +7,6 @@ import Picture_1 from "../Photos/picture_1.png";
 import Picture_2 from "../Photos/picture_2.png";
 import Picture_3 from "../Photos/picture_3.png";
 import Picture_4 from "../Photos/picture_4.png";
-import { Container } from "@mui/material";
 export default class Responsive extends Component {
   render() {
     var settings = {
