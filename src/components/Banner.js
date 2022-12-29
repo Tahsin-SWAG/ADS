@@ -53,7 +53,7 @@ export default class Responsive extends Component {
       ]
     };
     return (
-     <Box sx={{width:{xs:'97%' } , margin:{xs:'' , md:"auto"}}}>
+     <Box sx={{width:{xs:'100%' } , margin:{xs:'' , md:"auto"}}}>
      <Slider {...settings}>   
       {array.map((item,index)=>{
         return( 
