@@ -9,19 +9,21 @@ import Authors from "./components/Authors";
 import Store from "./components/Store";
 import  Campaign  from  "./components/Campaign";
 import Footer from "./components/Footer";
+import { Box } from "@mui/system";
+
 export default function App() {
     return(
-        <div>
+        <Box>
             <Navbar/>
             <Banner/>
-           <Sponsords/>
+            <Sponsords/>
            <Trending/>
             <Certificat/>
             <Launch/>
             <Authors/>
             <Store/>
             <Campaign/>
-            <Footer/>
-        </div>
+          <Footer/>
+        </Box>
     )
 }

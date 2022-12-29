@@ -7,8 +7,11 @@ import Picture_1 from "../Photos/picture_1.png";
 import Picture_2 from "../Photos/picture_2.png";
 import Picture_3 from "../Photos/picture_3.png";
 import Picture_4 from "../Photos/picture_4.png";
+import { Box } from "@mui/system";
+
 export default class Responsive extends Component {
   render() {
+    const array = [Picture_1,Picture_2,Picture_3,Picture_4]
     var settings = {
       dots: true,
       infinite: false,
@@ -16,6 +19,7 @@ export default class Responsive extends Component {
       slidesToShow: 1,
       slidesToScroll: 1,
       initialSlide: 0,
+      arrows:true,
       responsive: [
         {
           breakpoint: 1024,
@@ -23,7 +27,8 @@ export default class Responsive extends Component {
             slidesToShow: 1,
             slidesToScroll: 1,
             infinite: true,
-            dots: true
+            dots: true,
+            arrows:true
           }
         },
         {
@@ -31,35 +36,33 @@ export default class Responsive extends Component {
           settings: {
             slidesToShow: 1,
             slidesToScroll: 1,
-            initialSlide: 1
+            initialSlide: 1,
+            arrows:true
+
           }
         },
         {
           breakpoint: 480,
           settings: {
             slidesToShow: 1,
-            slidesToScroll: 1
+            slidesToScroll: 1,
+            arrows:true
+
           }
         }
       ]
     };
     return (
-     
-        <Slider {...settings}>
-          <div>
-            <img src={Picture_1} style={{width:'100%'}}/>
-          </div>
-          <div>
-          <img src={Picture_2} style={{width:'100%'}}/>
-          </div>
-          <div>
-          <img src={Picture_3} style={{width:'100%'}}/>
-          </div>
-          <div>
-          <img src={Picture_4} style={{width:'100%'}}/>
-          </div>
+     <Box sx={{width:{xs:'97%' } , margin:{xs:'' , md:"auto"}}}>
+     <Slider {...settings}>   
+      {array.map((item,index)=>{
+        return( 
+          <img src={item}style={{width:'100%'}}/>
+        )
+      }
+      )}
         </Slider>
-     
+     </Box>
     );
   }
 }

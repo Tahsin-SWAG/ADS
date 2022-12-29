@@ -14,7 +14,7 @@ export default function MediaControlCard() {
   return (
     <Container>
         <Box sx={{marginTop:'5%'}}>
-            <Typography variant='h4'>Start learning</Typography>
+  <Typography variant='h4'  component='a' href='#' sx={{textDecoration:'none' , color:'black' , ':hover':{textDecoration:'underline'}}}>Start learning</Typography>
     <Card sx={{ display:{xs:'block' , md:'flex'}}}>
     <CardMedia
         component="img"
